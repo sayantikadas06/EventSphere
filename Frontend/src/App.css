@@ -1,0 +1,355 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111827;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background-color: #1f2937;
+}
+
+.navbar h2 {
+  color: #a78bfa;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-left: 25px;
+}
+
+.welcome {
+  text-align: center;
+  padding: 90px 20px;
+}
+
+.welcome h1 {
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+.welcome p {
+  color: #cbd5e1;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.explore-btn {
+  display: inline-block;
+  background-color: #7c3aed;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.events {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.events p {
+  color: #cbd5e1;
+  margin-top: 12px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #9ca3af;
+  margin-top: 50px;
+}
+
+.event-list {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.event-card {
+  background-color: #1f2937;
+  width: 300px;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.event-card h3 {
+  color: #a78bfa;
+  margin-bottom: 18px;
+}
+
+.event-card p {
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.event-card button {
+  background-color: #7c3aed;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.event-card button:hover {
+  background-color: #6d28d9;
+}
+
+.registration-form {
+  background-color: #1f2937;
+  width: 350px;
+  max-width: 90%;
+  margin: 40px auto;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.registration-form h2 {
+  color: #a78bfa;
+  margin-bottom: 20px;
+}
+
+.registration-form input,
+.registration-form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #4b5563;
+  border-radius: 5px;
+  background-color: #111827;
+  color: white;
+}
+
+.registration-form button {
+  padding: 10px 15px;
+  margin: 5px 5px 0 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #7c3aed;
+  color: white;
+  cursor: pointer;
+}
+
+.registration-form button:hover {
+  background-color: #6d28d9;
+}
+
+/* Admin Login */
+.admin-section {
+  min-height: 65vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.admin-box {
+  width: 100%;
+  max-width: 400px;
+  background: #1f2937;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.admin-box h2 {
+  margin-top: 0;
+}
+
+.admin-box input,
+.search-form input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #4b5563;
+  border-radius: 5px;
+  background: #111827;
+  color: white;
+  box-sizing: border-box;
+}
+
+.admin-box button,
+.search-form button,
+.dashboard-heading button {
+  padding: 10px 18px;
+  background: #7c3aed;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.message {
+  color: #c4b5fd;
+  margin: 15px 0;
+}
+
+/* Dashboard */
+.dashboard {
+  min-height: 65vh;
+  padding: 40px 6%;
+}
+
+.dashboard-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 35px;
+}
+
+.search-form {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.search-form input {
+  max-width: 400px;
+}
+
+.search-form button {
+  margin-top: 0;
+  white-space: nowrap;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  background: #1f2937;
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 750px;
+}
+
+th,
+td {
+  padding: 14px;
+  text-align: left;
+  border-bottom: 1px solid #374151;
+}
+
+th {
+  background: #273449;
+  color: #c4b5fd;
+}
+
+.status-badge {
+  background: #14532d;
+  color: #bbf7d0;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  .dashboard {
+    padding: 25px 15px;
+  }
+
+  .dashboard-heading {
+    align-items: flex-start;
+  }
+
+  .search-form {
+    flex-wrap: wrap;
+  }
+
+  .search-form input {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 12px 15px;
+    gap: 12px;
+  }
+
+  .navbar h2 {
+    font-size: 22px;
+  }
+
+  .navbar div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .navbar a {
+    font-size: 14px;
+  }
+
+  .welcome {
+    padding: 65px 20px;
+  }
+
+  .welcome h1 {
+    font-size: 32px;
+  }
+
+  .event-list {
+    grid-template-columns: 1fr;
+  }
+
+  .event-card,
+  .registration-form {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .registration-form input,
+  .registration-form select {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .dashboard-heading h2 {
+    font-size: 22px;
+  }
+
+  .dashboard-heading button {
+    flex-shrink: 0;
+  }
+
+  .search-form input {
+    width: 100%;
+    flex-basis: 100%;
+  }
+
+  .search-form button {
+    flex: 1;
+  }
+
+  .table-container {
+    overflow-x: auto;
+  }
+}
+
