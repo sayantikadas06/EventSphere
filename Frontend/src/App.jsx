@@ -53,7 +53,23 @@ function App() {
       [e.target.name]: e.target.value,
     });
   };
-
+const domainOptions = selectedEvent?.title
+  ?.toLowerCase()
+  .includes("web")
+  ? [
+      "Frontend Development",
+      "Backend Development",
+      "Full Stack Development",
+      "UI/UX Design",
+      "Web Security",
+    ]
+  : [
+      "Machine Learning",
+      "Deep Learning",
+      "Natural Language Processing",
+      "Computer Vision",
+      "Data Science",
+    ];
   const handleSubmit = async (e) => {
     e.preventDefault();
     setMessage("");
@@ -245,17 +261,19 @@ function App() {
                   />
 
                   <select
-                    name="domainInterest"
-                    value={formData.domainInterest}
-                    onChange={handleChange}
-                    required
-                  >
-                    <option value="">Select Domain Interest</option>
-                    <option value="Web Development">Web Development</option>
-                    <option value="AI/ML">AI/ML</option>
-                    <option value="Data Science">Data Science</option>
-                    <option value="Cybersecurity">Cybersecurity</option>
-                  </select>
+  name="domainInterest"
+  value={formData.domainInterest}
+  onChange={handleChange}
+  required
+>
+  <option value="">Select Domain Interest</option>
+
+  {domainOptions.map((domain) => (
+    <option key={domain} value={domain}>
+      {domain}
+    </option>
+  ))}
+</select>
 
                   <button type="submit">Submit Registration</button>
                 </form>
