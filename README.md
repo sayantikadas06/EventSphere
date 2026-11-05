@@ -2,14 +2,19 @@
 
 EventSphere is a MERN stack web application where users can explore upcoming events and register for them. Admins can log in to view and search registered participants.
 
+## Live Demo
+
+- **Frontend:** https://event-sphere-mauve-three.vercel.app
+- **Backend API:** https://eventsphere-backend-hmq5.onrender.com
+
 ## Features
 
 ### Public Section
 - View upcoming events.
 - Check event date, description and available seats.
-- Register for an event using name, email, college/organization and domain interest.
+- Register using name, email, college/organization and domain interest.
 - Prevent duplicate registration using the same email for the same event.
-- Dynamically update the registered participant count.
+- Dynamically update registered participant count.
 
 ### Admin Section
 - Secure admin login using JWT authentication.
@@ -46,6 +51,7 @@ EventSphere/
 │   ├── server.js
 │   └── package.json
 │
+├── screenshots/
 └── README.md
 ```
 
@@ -111,7 +117,7 @@ A unique compound index on `event` and `email` prevents duplicate registrations 
 ### 1. Clone the repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/sayantikadas06/EventSphere.git
 cd EventSphere
 ```
 
@@ -163,22 +169,17 @@ Open the local URL displayed by Vite in your browser.
 
 | Method | Endpoint | Description |
 |---|---|---|
-| GET | /api/events | Get all events |
-| POST | /api/events | Create event (Admin) |
-| POST | /api/registrations | Register participant |
-| POST | /api/admin/login | Admin login |
-| GET | /api/admin/registrations | View/search registrations (Admin) |
+| GET | `/api/events` | Get all events |
+| POST | `/api/events` | Create event (Admin) |
+| POST | `/api/registrations` | Register participant |
+| POST | `/api/admin/login` | Admin login |
+| GET | `/api/admin/registrations` | View/search registrations (Admin) |
 
 Duplicate registration returns HTTP `409 Conflict`.
 
 ## Screenshots
 
-Add the following screenshots to a `screenshots` folder:
-
-1. Event showcase page
-2. Participant registration form
-3. Admin login page
-4. Admin dashboard with registered participants
+Application screenshots are included in the `screenshots/` folder.
 
 ## Security Notes
 
@@ -191,6 +192,6 @@ Add the following screenshots to a `screenshots` folder:
 
 **Sayantika Das**
 
-GitHub: [sayantikadas06](https://github.com/sayantikadas06)
+GitHub: https://github.com/sayantikadas06
 
 Developed as part of the CodeNova Full Stack Development Internship.
