@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "./App.css";
 
-const API_URL = "http://localhost:5000/api";
+const API_URL = "https://eventsphere-backend-hmq5.onrender.com";
 
 function App() {
   const [events, setEvents] = useState([]);
